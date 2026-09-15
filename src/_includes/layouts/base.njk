@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ title }}{% if page.url != "/" %} | {{ site.name }}{% endif %}</title>
+  <meta name="description" content="{{ description }}">
+  <meta name="theme-color" content="#211d1b">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="{{ site.name }}">
+  <meta property="og:title" content="{{ title }}">
+  <meta property="og:description" content="{{ description }}">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/styles.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HomeAndConstructionBusiness",
+    "name": "{{ site.name }}",
+    "description": "Chimney cleaning, inspection and repair; fireplace and stove service; dryer vent and air duct cleaning.",
+    "telephone": "+1-916-940-9693",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Sacramento",
+      "addressRegion": "CA",
+      "addressCountry": "US"
+    },
+    "areaServed": [{% for a in site.areas %}"{{ a.name }}, CA"{% if not loop.last %}, {% endif %}{% endfor %}]
+  }
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  {% include "partials/header.njk" %}
+
+  <main id="main">
+    {{ content | safe }}
+  </main>
+
+  {% include "partials/footer.njk" %}
+
+  <div class="mobile-cta" aria-label="Quick contact">
+    <a class="btn btn-primary" href="{{ site.phoneHref }}">
+      {% include "partials/icon-phone.njk" %}
+      Call Now
+    </a>
+    <a class="btn btn-light" href="/contact/">Free Quote</a>
+  </div>
+
+  <script src="/js/main.js" defer></script>
+</body>
+</html>

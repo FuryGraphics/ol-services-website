@@ -1,0 +1,66 @@
+---
+layout: layouts/page.njk
+title: Contact & Free Quote
+heading: Contact Us & Get a Free Quote
+crumbLabel: Contact
+eyebrow: Contact
+description: Contact O.L Services for a free chimney, fireplace, dryer vent or air duct cleaning quote in Sacramento. Call (916) 940-9693.
+intro: The fastest way to reach us is by phone. You can also send your details below, and we'll give you a clear, no-obligation quote.
+heroCta: false
+permalink: /contact/
+---
+<section class="section">
+  <div class="container contact-inner">
+    <div class="contact-info">
+      <div class="aside-card">
+        <h2>Call us</h2>
+        <a class="contact-phone" href="{{ site.phoneHref }}">{{ site.phone }}</a>
+        <p>Call to ask a question, get a quote or schedule a visit.</p>
+        <a class="btn btn-primary btn-block" href="{{ site.phoneHref }}">
+          {% include "partials/icon-phone.njk" %}
+          Call Now
+        </a>
+      </div>
+
+      <div class="aside-card">
+        <h2>Where we work</h2>
+        <p>Based in Sacramento, serving the greater Sacramento area:</p>
+        <p class="area-inline">
+          {%- for a in site.areas %}<a href="/service-areas/#{{ a.id }}">{{ a.name }}</a>{% if not loop.last %} · {% endif %}{% endfor -%}
+        </p>
+      </div>
+
+      <div class="aside-card">
+        <h2>Before you call</h2>
+        <p>It helps to know:</p>
+        <ul class="check-list">
+          <li>What kind of fireplace, stove or vent you have</li>
+          <li>When it was last cleaned or inspected, if you know</li>
+          <li>Anything you've noticed, such as smells, smoke, leaks or long dryer times</li>
+        </ul>
+      </div>
+    </div>
+
+    <div>
+      <h2 class="form-title">Request a free quote</h2>
+      {% include "partials/quote-form.njk" %}
+    </div>
+  </div>
+</section>
+
+<section class="section section-tint" aria-labelledby="map-title">
+  <div class="container">
+    <header class="section-head">
+      <p class="eyebrow">Service area map</p>
+      <h2 id="map-title">Serving Sacramento and surrounding cities</h2>
+    </header>
+    <div class="map-frame">
+      <iframe
+        title="Map of the greater Sacramento area"
+        src="https://www.google.com/maps?q=Sacramento,+CA&z=9&output=embed"
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        allowfullscreen></iframe>
+    </div>
+  </div>
+</section>

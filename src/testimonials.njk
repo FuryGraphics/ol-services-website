@@ -1,0 +1,40 @@
+---
+layout: layouts/page.njk
+title: Customer Reviews
+heading: Customer Reviews
+eyebrow: Reviews
+description: Share your experience with O.L Services. Customer reviews for chimney, fireplace, dryer vent and air duct service in the Sacramento area.
+intro: We want our reviews to come from real Sacramento-area customers talking about real jobs. If we've worked on your home, we'd love to hear how it went.
+permalink: /testimonials/
+---
+<section class="section">
+  <div class="container review-inner">
+    <div class="prose">
+      <h2>Had us out recently?</h2>
+      <p>
+        Your feedback helps your neighbors choose a chimney or vent company with
+        confidence, and it helps us keep doing the things you liked. Tell us what
+        service you had, how the visit went, and anything we could do better.
+      </p>
+      <p>
+        Give us a call or send a text to <a href="{{ site.phoneHref }}">{{ site.phone }}</a>
+        and let us know you'd like to share a review.
+      </p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="sms:{{ site.smsNumber }}?&body={{ 'Hi O.L Services, I would like to share feedback about my recent service:' | urlencode }}">Text us your feedback</a>
+        <a class="btn btn-light" href="{{ site.phoneHref }}">Call {{ site.phone }}</a>
+      </div>
+    </div>
+
+    <aside class="aside-card">
+      <h2>Our commitment on every visit</h2>
+      <ul class="check-list">
+        <li>We look before we quote</li>
+        <li>You get the price before work starts</li>
+        <li>Your home is protected and cleaned up</li>
+        <li>You get a clear summary of what we did and found</li>
+        <li>No pressure, and no unnecessary work</li>
+      </ul>
+    </aside>
+  </div>
+</section>

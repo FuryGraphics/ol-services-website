@@ -1,0 +1,13 @@
+<div class="post-grid">
+  {%- for p in collections.posts %}
+  <a class="link-card" href="{{ p.url }}">
+    <img src="/images/{{ p.data.image }}" width="1600" height="1075" alt="" loading="lazy">
+    <div class="link-card-body">
+      <p class="post-meta"><time datetime="{{ p.date | isoDate }}">{{ p.date | readableDate }}</time></p>
+      <h3>{{ p.data.title }}</h3>
+      <p>{{ p.data.description }}</p>
+      <span class="link-card-more" aria-hidden="true">Read article →</span>
+    </div>
+  </a>
+  {%- endfor %}
+</div>

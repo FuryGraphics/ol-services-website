@@ -1,0 +1,47 @@
+<section class="cta-band" aria-labelledby="cta-band-title">
+  <div class="container cta-band-inner">
+    <div>
+      <h2 id="cta-band-title">Ready for a cleaner, safer chimney?</h2>
+      <p>Call for a free, no-obligation quote anywhere in the greater Sacramento area.</p>
+    </div>
+    <div class="cta-band-actions">
+      <a class="btn btn-primary btn-lg" href="{{ site.phoneHref }}">
+        {% include "partials/icon-phone.njk" %}
+        Call {{ site.phone }}
+      </a>
+      <a class="btn btn-ghost btn-lg" href="/contact/">Request a Quote</a>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <div>
+      <p class="footer-brand">{{ site.name }}</p>
+      <p>{{ site.tagline }}<br>Serving the greater Sacramento area</p>
+      <p><a class="footer-phone" href="{{ site.phoneHref }}">{{ site.phone }}</a></p>
+    </div>
+    <nav aria-label="Footer services">
+      <p class="footer-label">Services</p>
+      <ul>
+        {%- for s in site.services %}
+        <li><a href="{{ s.url }}">{{ s.title }}</a></li>
+        {%- endfor %}
+      </ul>
+    </nav>
+    <nav aria-label="Footer company">
+      <p class="footer-label">Company</p>
+      <ul>
+        <li><a href="/about/">About Us</a></li>
+        <li><a href="/service-areas/">Service Areas</a></li>
+        <li><a href="/testimonials/">Customer Reviews</a></li>
+        <li><a href="/blog/">Chimney Tips</a></li>
+        <li><a href="/faq/">FAQ</a></li>
+        <li><a href="/contact/">Contact &amp; Quote</a></li>
+      </ul>
+    </nav>
+  </div>
+  <div class="container footer-base">
+    <p>&copy; <span data-year>2026</span> {{ site.name }}. All rights reserved.</p>
+  </div>
+</footer>

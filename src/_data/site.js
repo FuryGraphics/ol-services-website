@@ -1,0 +1,83 @@
+export default {
+  name: "O.L Services",
+  tagline: "Chimney & Air Duct Cleaning",
+  city: "Sacramento, CA",
+  phone: "(916) 940-9693",
+  phoneHref: "tel:+19169409693",
+  smsNumber: "+19169409693",
+
+  // Main service pages, in the order they appear in menus and grids
+  services: [
+    {
+      title: "Chimney Cleaning",
+      url: "/services/chimney-cleaning/",
+      image: "chimney-sweeping.jpg",
+      alt: "Technician sweeping a brick fireplace with a rod brush and vacuum",
+      summary: "Sweeping and cleaning to remove soot and creosote from the flue, smoke chamber and firebox.",
+    },
+    {
+      title: "Chimney Inspection",
+      url: "/services/chimney-inspection/",
+      image: "flue-camera-inspection.jpg",
+      alt: "Tablet showing a camera view inside a chimney flue",
+      summary: "Level 1, 2 and 3 inspections that document the condition of your chimney and venting.",
+    },
+    {
+      title: "Chimney Repair & Maintenance",
+      url: "/services/chimney-repair/",
+      image: "tuck-pointing.jpg",
+      alt: "Gloved hands tuck pointing mortar joints on a brick chimney",
+      summary: "Tuck pointing, flue repair, crack repair and routine upkeep for brick and masonry chimneys.",
+    },
+    {
+      title: "Chimney Cap & Crown Repair",
+      url: "/services/chimney-cap-crown/",
+      image: "chimney-cap-crown.jpg",
+      alt: "Stainless steel chimney cap with spark arrestor mesh on a brick chimney",
+      summary: "Chimney cap installation, crown repair and spark arrestor installation.",
+    },
+    {
+      title: "Fireplace & Stove Services",
+      url: "/services/fireplace-services/",
+      image: "wood-stove.jpg",
+      alt: "Cast iron wood burning stove with a small fire on a brick hearth",
+      summary: "Service for gas fireplaces, wood fireplaces, wood burning stoves and pellet stoves.",
+    },
+    {
+      title: "Dryer Vent Cleaning",
+      url: "/services/dryer-vent-cleaning/",
+      image: "dryer-vent.jpg",
+      alt: "Technician cleaning a dryer vent with a rotary brush and vacuum hose",
+      summary: "Clearing lint from the full vent run to help your dryer work efficiently and reduce fire risk.",
+    },
+    {
+      title: "Air Duct Cleaning",
+      url: "/services/air-duct-cleaning/",
+      image: "air-duct-cleaning.jpg",
+      alt: "Technician cleaning a ceiling air register with a duct brush",
+      summary: "Removing built-up dust and debris from supply and return ducts.",
+    },
+    {
+      title: "Chimney Construction",
+      url: "/services/chimney-construction/",
+      image: "chimney-construction.jpg",
+      alt: "Mason building a new red brick chimney from scaffolding",
+      summary: "New masonry chimneys and full chimney rebuilds.",
+    },
+  ],
+
+  areas: [
+    { name: "Sacramento", id: "sacramento" },
+    { name: "Elk Grove", id: "elk-grove" },
+    { name: "Roseville", id: "roseville" },
+    { name: "Folsom", id: "folsom" },
+    { name: "Citrus Heights", id: "citrus-heights" },
+    { name: "Rancho Cordova", id: "rancho-cordova" },
+    { name: "Carmichael", id: "carmichael" },
+    { name: "Fair Oaks", id: "fair-oaks" },
+    { name: "Orangevale", id: "orangevale" },
+    { name: "West Sacramento", id: "west-sacramento" },
+    { name: "Rocklin", id: "rocklin" },
+    { name: "Davis", id: "davis" },
+  ],
+};

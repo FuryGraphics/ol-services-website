@@ -1,0 +1,71 @@
+---
+layout: layouts/base.njk
+---
+{#
+  Interior page: header band + content.
+  Front matter: title, description, heading, intro, eyebrow, image, alt,
+  crumbs (optional [{label, url}]), aside ("service" to show quote card + service list)
+#}
+<section class="page-hero{% if image %} page-hero-media{% endif %}">
+  <div class="container page-hero-inner">
+    <div class="page-hero-copy">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="/">Home</a></li>
+          {%- for c in crumbs %}
+          <li><a href="{{ c.url }}">{{ c.label }}</a></li>
+          {%- endfor %}
+          <li aria-current="page">{{ crumbLabel or title }}</li>
+        </ol>
+      </nav>
+      {% if eyebrow %}<p class="eyebrow">{{ eyebrow }}</p>{% endif %}
+      <h1>{{ heading or title }}</h1>
+      {% if intro %}<p class="lede">{{ intro }}</p>{% endif %}
+      {% if heroCta != false %}
+      <div class="hero-actions">
+        <a class="btn btn-primary btn-lg" href="{{ site.phoneHref }}">
+          {% include "partials/icon-phone.njk" %}
+          Call {{ site.phone }}
+        </a>
+        <a class="btn btn-ghost btn-lg" href="/contact/">Get a Free Quote</a>
+      </div>
+      {% endif %}
+    </div>
+    {% if image %}
+    <figure class="page-hero-figure">
+      <img src="/images/{{ image }}" width="1600" height="1075" alt="{{ alt }}" fetchpriority="high">
+    </figure>
+    {% endif %}
+  </div>
+</section>
+
+{% if aside == "service" %}
+<div class="section">
+  <div class="container with-aside">
+    <article class="prose">
+      {{ content | safe }}
+    </article>
+    <aside class="aside">
+      <div class="aside-card aside-quote">
+        <h2>Get a free quote</h2>
+        <p>Tell us what's going on and we'll give you a clear price before any work starts.</p>
+        <a class="btn btn-primary btn-block" href="{{ site.phoneHref }}">
+          {% include "partials/icon-phone.njk" %}
+          {{ site.phone }}
+        </a>
+        <a class="btn btn-light btn-block" href="/contact/">Request online</a>
+      </div>
+      <nav class="aside-card" aria-label="Other services">
+        <h2>Our services</h2>
+        <ul class="aside-links">
+          {%- for s in site.services %}
+          <li><a href="{{ s.url }}" {% if page.url == s.url %}aria-current="page"{% endif %}>{{ s.title }}</a></li>
+          {%- endfor %}
+        </ul>
+      </nav>
+    </aside>
+  </div>
+</div>
+{% else %}
+{{ content | safe }}
+{% endif %}

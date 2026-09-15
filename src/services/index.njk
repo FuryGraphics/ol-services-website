@@ -1,0 +1,35 @@
+---
+title: Chimney, Fireplace & Duct Services
+heading: Our services
+description: Chimney cleaning, inspection, repair, caps and crowns, fireplace and stove service, dryer vent and air duct cleaning, and chimney construction in Sacramento.
+intro: From a routine sweep to a full rebuild, every job starts with a look at what you actually need and a clear quote.
+aside: false
+crumbs: []
+crumbLabel: Services
+---
+<section class="section">
+  <div class="container">
+    <div class="card-grid">
+      {%- for s in site.services %}
+      <a class="link-card" href="{{ s.url }}">
+        <img src="/images/{{ s.image }}" width="1600" height="1075" alt="" loading="lazy">
+        <div class="link-card-body">
+          <h2 class="h3">{{ s.title }}</h2>
+          <p>{{ s.summary }}</p>
+          <span class="link-card-more" aria-hidden="true">Learn more →</span>
+        </div>
+      </a>
+      {%- endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section section-tint" aria-labelledby="process-title">
+  <div class="container">
+    <header class="section-head">
+      <p class="eyebrow">How it works</p>
+      <h2 id="process-title">What to expect on every job</h2>
+    </header>
+    {% include "partials/steps.njk" %}
+  </div>
+</section>

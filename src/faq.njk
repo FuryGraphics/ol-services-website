@@ -1,0 +1,84 @@
+---
+layout: layouts/page.njk
+title: Chimney & Duct Cleaning FAQ
+heading: Frequently Asked Questions
+crumbLabel: FAQ
+eyebrow: FAQ
+description: Answers to common questions about chimney cleaning, inspections, chimney odors, gas fireplaces, wood and pellet stoves, dryer vents and air duct cleaning.
+intro: Straight answers to the questions we hear most. Don't see yours? Give us a call.
+permalink: /faq/
+groups:
+  - title: Chimney cleaning & inspection
+    items:
+      - q: How often should my chimney be cleaned?
+        a: The fire code standard NFPA 211 calls for chimneys, fireplaces and vents to be inspected once a year, and cleaned when needed. How often yours needs cleaning depends on how often you burn, what you burn, and how your system is set up. A fireplace used most winter evenings will need it more often than one used a few times a year. The annual inspection tells you.
+      - q: What's the difference between a chimney sweep and an inspection?
+        a: A sweep physically cleans soot and creosote out of the flue, smoke chamber and firebox. An inspection evaluates the condition of the chimney, including the liner, mortar, crown, cap, damper and clearances. We note obvious issues during a sweep, but an inspection is the thorough look at whether everything is sound.
+      - q: Which inspection level do I need?
+        a: For a chimney you use regularly and haven't changed, a Level 1 inspection is standard. A Level 2 is called for when you're buying or selling a home, have changed the appliance or fuel type, or after a chimney fire, earthquake or other event that could cause damage. Level 3 is only needed when a hidden hazard is suspected. See our Chimney Inspection page for details.
+      - q: Will cleaning make a mess in my house?
+        a: It shouldn't. We lay down drop cloths, run a vacuum while we work to capture soot, and clean up the work area before we leave.
+      - q: What are signs of a chimney fire?
+        a: A loud cracking or popping noise, a roaring sound like a freight train, dense smoke, or an intense hot smell. Many chimney fires are quiet and go unnoticed, though. Afterward you may find puffy, honeycombed creosote, cracked flue tiles, or warped metal parts. If you think you're having a chimney fire, get everyone out and call 911. If you suspect a past chimney fire, don't use the fireplace until it's been inspected.
+  - title: Odors, smoke & safety
+    items:
+      - q: Why does my fireplace smell, especially in summer?
+        a: The most common cause is creosote in the flue. On hot or humid days, the smell gets stronger, and if the house has negative air pressure (from exhaust fans, a running dryer or a tightly sealed home), air can flow down the chimney and carry the odor inside. Cleaning removes the source. A top-sealing damper or a properly closed damper helps too. Other causes include animals or debris in the chimney, and water getting in through a bad crown or missing cap.
+      - q: Why does smoke come into the room when I light a fire?
+        a: Common causes include a closed or partly closed damper, a cold flue, a blockage such as a nest or heavy creosote, negative pressure in the house, or a chimney that's too short or undersized for the fireplace. Try opening a nearby window slightly when lighting the fire. If it keeps happening, have the chimney inspected.
+      - q: Do I need a carbon monoxide alarm if I have a fireplace?
+        a: Yes. Any home with a fuel-burning appliance, including gas or wood fireplaces, stoves, furnaces or water heaters, or an attached garage, should have working CO alarms. California law requires carbon monoxide devices in dwellings with a fossil fuel-burning appliance, fireplace or attached garage. Test them regularly and follow the manufacturer's replacement schedule.
+      - q: What wood should I burn?
+        a: Dry, seasoned hardwood or softwood split and stored under cover. The EPA's Burn Wise program recommends a moisture content of 20% or less, and an inexpensive moisture meter will tell you. Never burn trash, painted or treated wood, cardboard or wrapping paper. They produce more creosote and harmful smoke.
+  - title: Gas fireplaces & stoves
+    items:
+      - q: Does a gas fireplace need to be serviced?
+        a: Yes. Gas doesn't leave creosote, but vents can still get blocked by nests or debris, logs can shift and cause sooting, and burners and pilot assemblies collect dust. Periodic service keeps the flame burning cleanly and confirms the venting is clear.
+      - q: Why are my gas logs turning black?
+        a: Sooting on gas logs usually means the flame is burning incompletely. That's often because the logs have been moved out of their designed position, or the burner ports or air shutter are dirty or out of adjustment. Stop using it and have it serviced, because incomplete combustion can also increase carbon monoxide.
+      - q: How often does a pellet stove need cleaning?
+        a: Pellet stoves need frequent light cleaning by the owner, such as emptying the burn pot and ash pan per the manufacturer's schedule, plus a thorough professional cleaning of the heat exchanger, exhaust blower and venting, typically once a season or after a set amount of pellets burned. Check your owner's manual for the specific interval.
+  - title: Dryer vents & air ducts
+    items:
+      - q: How often should a dryer vent be cleaned?
+        a: It depends on how much laundry you do and how long the vent run is. A yearly check is a sensible baseline, and busy households or long, winding vent runs may need cleaning more often. Warning signs include longer drying times, a hot dryer, or a burning smell.
+      - q: Is dryer vent cleaning really a fire safety issue?
+        a: Yes. The U.S. Fire Administration reports that failure to clean is the leading factor contributing to home clothes dryer fires. Lint is highly combustible, and a clogged vent traps heat.
+      - q: Do I really need my air ducts cleaned?
+        a: Not always. The EPA suggests considering duct cleaning when there's substantial visible mold growth, a vermin infestation, or excessive dust and debris, including debris blowing out of registers. Cleaning also makes sense after a renovation. If we don't think your ducts need it, we'll tell you.
+  - title: Pricing & scheduling
+    items:
+      - q: How much does it cost?
+        a: It depends on the service and what we find, for example a single fireplace sweep versus a stove with a long stovepipe, or a short dryer vent versus a roof-mounted one. Call or send a request and we'll give you a free, upfront quote before any work begins.
+      - q: What areas do you serve?
+        a: Sacramento and surrounding cities including Elk Grove, Roseville, Folsom, Citrus Heights, Rancho Cordova, Carmichael, Fair Oaks, Orangevale, West Sacramento, Rocklin and Davis. See our Service Areas page, or call to ask about your location.
+---
+<section class="section">
+  <div class="container container-narrow">
+    {%- for g in groups %}
+    <section class="faq-group" aria-labelledby="faq-{{ loop.index }}">
+      <h2 id="faq-{{ loop.index }}">{{ g.title }}</h2>
+      <div class="faq">
+        {%- for item in g.items %}
+        <details>
+          <summary>{{ item.q }}</summary>
+          <p>{{ item.a }}</p>
+        </details>
+        {%- endfor %}
+      </div>
+    </section>
+    {%- endfor %}
+  </div>
+</section>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {%- for g in groups %}{% set gl = loop.last %}{% for item in g.items %}
+    { "@type": "Question", "name": {{ item.q | dump | safe }}, "acceptedAnswer": { "@type": "Answer", "text": {{ item.a | dump | safe }} } }{% if not (gl and loop.last) %},{% endif %}
+    {%- endfor %}{% endfor %}
+  ]
+}
+</script>

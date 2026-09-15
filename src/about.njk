@@ -1,0 +1,98 @@
+---
+layout: layouts/page.njk
+title: About Us
+heading: About O.L Services
+eyebrow: About us
+description: O.L Services is a Sacramento chimney and air duct cleaning company focused on honest assessments, clear quotes and careful work in your home.
+intro: A Sacramento company that cleans, inspects and repairs chimneys, fireplaces, stoves, dryer vents and air ducts, with a simple approach of looking first, explaining clearly and doing careful work.
+image: hero-roof-inspection.jpg
+alt: Technician inspecting a brick chimney on a residential roof
+permalink: /about/
+---
+<section class="section">
+  <div class="container with-aside">
+    <div class="prose">
+      <h2>Who we are</h2>
+      <p>
+        O.L Services is based in Sacramento and works in homes across the greater
+        Sacramento area. We cover the parts of a home that handle fire, smoke and
+        exhaust air: chimneys and fireplaces, wood, gas and pellet stoves, dryer
+        vents and air ducts.
+      </p>
+      <p>
+        These systems are easy to forget because they sit behind walls, above ceilings
+        and up on the roof. When they're neglected, they tend to fail in ways that
+        matter: chimney fires, leaks, smoke in the house, or a dryer vent packed with lint.
+        Our job is to keep that from happening, and to give you straight answers about
+        the condition of your home.
+      </p>
+
+      <h2>How we work</h2>
+      <p>
+        Every visit follows the same four steps: <strong>inspect, quote, clean or repair,
+        report</strong>. You'll know what we found, what it costs and what we did
+        before we leave.
+      </p>
+    </div>
+    <aside class="aside">
+      <div class="aside-card aside-quote">
+        <h2>Talk to us</h2>
+        <p>Questions about your chimney, stove or vents? Call for a free quote.</p>
+        <a class="btn btn-primary btn-block" href="{{ site.phoneHref }}">
+          {% include "partials/icon-phone.njk" %}
+          {{ site.phone }}
+        </a>
+        <a class="btn btn-light btn-block" href="/contact/">Request online</a>
+      </div>
+    </aside>
+  </div>
+</section>
+
+<section class="section section-tint" aria-labelledby="values-title">
+  <div class="container">
+    <header class="section-head">
+      <p class="eyebrow">Our approach</p>
+      <h2 id="values-title">What you can expect from us</h2>
+    </header>
+    <div class="value-grid">
+      <article class="value">
+        <h3>Look before we quote</h3>
+        <p>We don't price a job over the phone without knowing what's going on. We look first, then give you a clear number.</p>
+      </article>
+      <article class="value">
+        <h3>Honest recommendations</h3>
+        <p>If something doesn't need doing yet, we'll say so. If an inspection is all you need, that's all we'll recommend.</p>
+      </article>
+      <article class="value">
+        <h3>Show, don't just tell</h3>
+        <p>When we find a problem, we show you with photos, video or a look for yourself, so you can decide with real information.</p>
+      </article>
+      <article class="value">
+        <h3>Respect for your home</h3>
+        <p>Drop cloths down, vacuums running, and the work area cleaned up before we leave.</p>
+      </article>
+      <article class="value">
+        <h3>No pressure</h3>
+        <p>Quotes are free and come with no obligation. Take the time you need.</p>
+      </article>
+      <article class="value">
+        <h3>A clear report</h3>
+        <p>You get a summary of what we did and anything worth watching, so you can plan ahead.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="what-title">
+  <div class="container">
+    <header class="section-head">
+      <p class="eyebrow">What we do</p>
+      <h2 id="what-title">Our services</h2>
+    </header>
+    <ul class="pill-list">
+      {%- for s in site.services %}
+      <li><a href="{{ s.url }}">{{ s.title }}</a></li>
+      {%- endfor %}
+    </ul>
+  </div>
+</section>

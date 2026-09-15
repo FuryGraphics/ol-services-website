@@ -1,0 +1,51 @@
+<form class="quote-form" id="quote-form" data-sms="{{ site.smsNumber }}" data-phone="{{ site.phone }}" novalidate>
+  <div class="field">
+    <label for="f-name">Name</label>
+    <input id="f-name" name="name" type="text" autocomplete="name" required>
+  </div>
+  <div class="field-row">
+    <div class="field">
+      <label for="f-phone">Phone</label>
+      <input id="f-phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" required>
+    </div>
+    <div class="field">
+      <label for="f-city">City</label>
+      <input id="f-city" name="city" type="text" autocomplete="address-level2">
+    </div>
+  </div>
+  <div class="field">
+    <label for="f-service">Service</label>
+    <select id="f-service" name="service">
+      <option value="">Select a service (optional)</option>
+      <optgroup label="Chimney">
+        <option>Chimney cleaning / sweeping</option>
+        <option>Chimney inspection</option>
+        <option>Chimney repair / maintenance</option>
+        <option>Tuck pointing</option>
+        <option>Flue repair</option>
+        <option>Chimney cap repair / installation</option>
+        <option>Chimney crown repair</option>
+        <option>Spark arrestor installation</option>
+        <option>Chimney construction</option>
+      </optgroup>
+      <optgroup label="Fireplaces &amp; stoves">
+        <option>Gas fireplace service</option>
+        <option>Wood fireplace service</option>
+        <option>Wood burning stove service</option>
+        <option>Pellet stove service</option>
+      </optgroup>
+      <optgroup label="Vents &amp; ducts">
+        <option>Dryer vent cleaning</option>
+        <option>Air duct cleaning</option>
+      </optgroup>
+      <option>Not sure / something else</option>
+    </select>
+  </div>
+  <div class="field">
+    <label for="f-msg">Details <span class="optional">(optional)</span></label>
+    <textarea id="f-msg" name="message" rows="4"></textarea>
+  </div>
+  <button class="btn btn-primary btn-lg btn-block" type="submit">Text My Quote Request</button>
+  <p class="form-note">Opens your messaging app with these details filled in, ready to send to {{ site.phone }}.</p>
+  <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+</form>

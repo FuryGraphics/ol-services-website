@@ -1,0 +1,96 @@
+---
+layout: layouts/page.njk
+title: Service Areas
+heading: Chimney & Duct Cleaning Across Greater Sacramento
+eyebrow: Service areas
+description: O.L Services provides chimney cleaning, inspection, repair, and dryer vent and air duct cleaning in Sacramento, Elk Grove, Roseville, Folsom, Citrus Heights, Rancho Cordova and nearby cities.
+intro: Based in Sacramento, serving homeowners throughout Sacramento, Placer and Yolo counties. If your city isn't listed, call us, because we may still be able to help.
+image: sacramento-neighborhood.jpg
+alt: Tree-lined residential street with single-story homes and brick chimneys at golden hour
+permalink: /service-areas/
+cities:
+  - id: sacramento
+    name: Sacramento
+    county: Sacramento County
+    blurb: From early-1900s homes in East Sacramento, Land Park and Curtis Park to newer neighborhoods in Natomas, Sacramento has every kind of chimney. Older brick chimneys often need tuck pointing, crown repair and liner checks. Newer homes more often have gas fireplaces and long dryer vent runs.
+  - id: elk-grove
+    name: Elk Grove
+    county: Sacramento County
+    blurb: Elk Grove's many newer subdivisions mean lots of gas fireplaces, prefabricated fireplaces and second-story laundry rooms with long dryer vents, alongside older homes near Old Town that still burn wood.
+  - id: roseville
+    name: Roseville
+    county: Placer County
+    blurb: In Roseville we handle everything from wood-burning fireplaces in established neighborhoods to gas units and dryer vents in newer developments on the west side of the city.
+  - id: folsom
+    name: Folsom
+    county: Sacramento County
+    blurb: Folsom homes range from historic properties near Sutter Street to hillside houses with wood stoves and inserts. Cap and spark arrestor checks are a smart addition for homes near open space.
+  - id: citrus-heights
+    name: Citrus Heights
+    county: Sacramento County
+    blurb: Many Citrus Heights homes date from the 1960s–1980s and have original masonry fireplaces, which can mean aging mortar, worn dampers and crowns due for attention.
+  - id: rancho-cordova
+    name: Rancho Cordova
+    county: Sacramento County
+    blurb: Rancho Cordova has both mid-century homes with original brick chimneys and newer communities with gas fireplaces. We clean, inspect and repair both.
+  - id: carmichael
+    name: Carmichael
+    county: Sacramento County
+    blurb: Carmichael's larger lots and mature trees are beautiful, but leaves and branches can clog chimney caps and spark arrestors, and nests are common in uncapped flues.
+  - id: fair-oaks
+    name: Fair Oaks
+    county: Sacramento County
+    blurb: Fair Oaks has many established homes with wood-burning fireplaces and stoves. Regular sweeping and inspections keep them safe to use through the winter.
+  - id: orangevale
+    name: Orangevale
+    county: Sacramento County
+    blurb: On Orangevale's semi-rural properties, wood stoves are popular. We service stoves, stovepipes and chimneys, and install spark arrestors.
+  - id: west-sacramento
+    name: West Sacramento
+    county: Yolo County
+    blurb: Just across the river, West Sacramento has older homes in Broderick and Bryte and newer ones in Southport. We handle chimney, fireplace and vent service for both.
+  - id: rocklin
+    name: Rocklin
+    county: Placer County
+    blurb: Rocklin's mostly newer housing means lots of gas fireplaces and dryer vents that route through the roof or long wall runs. Both benefit from periodic cleaning.
+  - id: davis
+    name: Davis
+    county: Yolo County
+    blurb: In Davis we serve homeowners and rental property owners with chimney inspections, sweeping, and dryer vent cleaning between tenants.
+---
+<section class="section">
+  <div class="container">
+    <nav class="area-jump" aria-label="Jump to a city">
+      <ul class="pill-list">
+        {%- for c in cities %}
+        <li><a href="#{{ c.id }}">{{ c.name }}</a></li>
+        {%- endfor %}
+      </ul>
+    </nav>
+
+    <div class="city-grid">
+      {%- for c in cities %}
+      <article class="city" id="{{ c.id }}">
+        <p class="city-county">{{ c.county }}</p>
+        <h2>{{ c.name }}</h2>
+        <p>{{ c.blurb }}</p>
+        <a class="text-link" href="{{ site.phoneHref }}">Call for service in {{ c.name }} →</a>
+      </article>
+      {%- endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section section-tint" aria-labelledby="area-services-title">
+  <div class="container">
+    <header class="section-head">
+      <p class="eyebrow">Available in every city</p>
+      <h2 id="area-services-title">Services we provide throughout the region</h2>
+    </header>
+    <ul class="pill-list">
+      {%- for s in site.services %}
+      <li><a href="{{ s.url }}">{{ s.title }}</a></li>
+      {%- endfor %}
+    </ul>
+  </div>
+</section>

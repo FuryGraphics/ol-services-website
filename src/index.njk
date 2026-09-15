@@ -1,0 +1,138 @@
+---
+layout: layouts/base.njk
+title: Sacramento Chimney & Air Duct Cleaning | O.L Services
+description: Chimney cleaning, inspection and repair, fireplace and stove service, and dryer vent and air duct cleaning in Sacramento, CA. Call (916) 940-9693 for a free quote.
+---
+<section class="hero">
+  <div class="container hero-inner">
+    <div class="hero-copy">
+      <p class="eyebrow">Serving the greater Sacramento area</p>
+      <h1>Sacramento Chimney &amp; Air Duct Cleaning</h1>
+      <p class="lede">
+        Chimney cleaning, inspection and repair, fireplace and stove service,
+        and dryer vent and air duct cleaning. We start with an honest look
+        and a clear, upfront quote.
+      </p>
+      <div class="hero-actions">
+        <a class="btn btn-primary btn-lg" href="{{ site.phoneHref }}">
+          {% include "partials/icon-phone.njk" %}
+          Call {{ site.phone }}
+        </a>
+        <a class="btn btn-ghost btn-lg" href="/contact/">Get a Free Quote</a>
+      </div>
+      <ul class="hero-points">
+        <li>Free, no-obligation quotes</li>
+        <li>Written findings after every job</li>
+        <li>Chimneys, stoves, dryer vents &amp; ducts</li>
+      </ul>
+    </div>
+
+    <figure class="hero-media">
+      <img src="/images/hero-roof-inspection.jpg" width="1600" height="1075"
+           alt="Technician inspecting a brick chimney on a residential roof at sunset"
+           fetchpriority="high">
+      <figcaption class="hero-badge">
+        <strong>Inspect first.</strong> Quote before any work begins.
+      </figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="services-title">
+  <div class="container">
+    <header class="section-head">
+      <p class="eyebrow">Services</p>
+      <h2 id="services-title">Everything from the firebox to the chimney cap</h2>
+      <p>One local crew for your chimney, fireplace, stove and home ventilation.</p>
+    </header>
+
+    <div class="card-grid">
+      {%- for s in site.services %}
+      <a class="link-card" href="{{ s.url }}">
+        <img src="/images/{{ s.image }}" width="1600" height="1075" alt="" loading="lazy">
+        <div class="link-card-body">
+          <h3>{{ s.title }}</h3>
+          <p>{{ s.summary }}</p>
+          <span class="link-card-more" aria-hidden="true">Learn more →</span>
+        </div>
+      </a>
+      {%- endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section section-dark" aria-labelledby="safety-title">
+  <div class="container">
+    <header class="section-head">
+      <p class="eyebrow">Why it matters</p>
+      <h2 id="safety-title">A little upkeep goes a long way</h2>
+      <p>
+        Chimneys, stoves and vents do their jobs quietly. Most problems build up
+        slowly, out of sight, and they're simple to catch with regular care.
+      </p>
+    </header>
+
+    <div class="safety-grid">
+      <article class="safety-item">
+        <h3>Creosote buildup</h3>
+        <p>Burning wood leaves creosote, a flammable tar-like residue, on the inside of the flue. Cleaning removes it before it builds into a hazard.</p>
+      </article>
+      <article class="safety-item">
+        <h3>Chimney fire risk</h3>
+        <p>Cracked liners, worn mortar and blockages can let heat reach combustible parts of the house. Inspections catch them while they're still easy to fix.</p>
+      </article>
+      <article class="safety-item">
+        <h3>Carbon monoxide</h3>
+        <p>Fuel-burning appliances make carbon monoxide, an odorless gas. A blocked chimney or vent can push it back indoors, so keep venting clear and CO alarms working.</p>
+      </article>
+      <article class="safety-item">
+        <h3>Dryer vent lint</h3>
+        <p>According to the U.S. Fire Administration, failure to clean is the leading factor in home clothes dryer fires.</p>
+      </article>
+    </div>
+
+    <p class="safety-note">
+      The National Fire Protection Association standard NFPA 211 calls for chimneys,
+      fireplaces and vents to be inspected once a year and cleaned as needed.
+    </p>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="process-title">
+  <div class="container">
+    <header class="section-head">
+      <p class="eyebrow">How it works</p>
+      <h2 id="process-title">Four straightforward steps</h2>
+    </header>
+    {% include "partials/steps.njk" %}
+  </div>
+</section>
+
+<section class="section section-tint" aria-labelledby="area-title">
+  <div class="container area-inner">
+    <div>
+      <p class="eyebrow">Service area</p>
+      <h2 id="area-title">Local to Sacramento</h2>
+      <p>Based in Sacramento and serving homes across the surrounding region.</p>
+      <a class="btn btn-primary" href="/service-areas/">See all service areas</a>
+    </div>
+    <ul class="area-list">
+      {%- for a in site.areas %}
+      <li{% if loop.first %} class="primary"{% endif %}><a href="/service-areas/#{{ a.id }}">{{ a.name }}</a></li>
+      {%- endfor %}
+    </ul>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="tips-title">
+  <div class="container">
+    <header class="section-head section-head-row">
+      <div>
+        <p class="eyebrow">Chimney tips</p>
+        <h2 id="tips-title">From the blog</h2>
+      </div>
+      <a class="text-link" href="/blog/">All articles →</a>
+    </header>
+    {% include "partials/post-cards.njk" %}
+  </div>
+</section>
